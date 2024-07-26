@@ -2,6 +2,7 @@ package hrmsproject.hrms.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,7 @@ public class JobTitle {
     private int id;
 
     @Column(name = "title")
+    @NotBlank(message = "Job title can not be empty")
     private String title;
 
     @OneToMany(mappedBy = "jobTitle")

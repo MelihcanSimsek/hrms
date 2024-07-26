@@ -2,6 +2,8 @@ package hrmsproject.hrms.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -41,6 +43,7 @@ public class JobAdvertisement {
     private boolean status;
 
     @Column(name = "free_position_amount")
+    @NotNull(message = "Free position amount can not be empty")
     private int freePositionAmount;
 
     @ManyToOne()

@@ -1,7 +1,7 @@
 package hrmsproject.hrms.business.abstracts;
 
 import hrmsproject.hrms.core.utilities.results.Result;
-import hrmsproject.hrms.entities.Confirmation;
+import hrmsproject.hrms.entities.concretes.Confirmation;
 import org.springframework.stereotype.Service;
 
 @Service

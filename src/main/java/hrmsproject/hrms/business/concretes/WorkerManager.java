@@ -1,7 +1,7 @@
 package hrmsproject.hrms.business.concretes;
 import hrmsproject.hrms.business.abstracts.WorkerService;
 import hrmsproject.hrms.core.utilities.results.*;
-import hrmsproject.hrms.entities.Worker;
+import hrmsproject.hrms.entities.concretes.Worker;
 import hrmsproject.hrms.repositories.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

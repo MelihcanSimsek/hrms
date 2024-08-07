@@ -1,4 +1,4 @@
-package hrmsproject.hrms.entities;
+package hrmsproject.hrms.entities.concretes;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

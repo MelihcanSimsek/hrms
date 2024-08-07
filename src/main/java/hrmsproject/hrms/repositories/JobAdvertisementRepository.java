@@ -1,6 +1,6 @@
 package hrmsproject.hrms.repositories;
 
-import hrmsproject.hrms.entities.JobAdvertisement;
+import hrmsproject.hrms.entities.concretes.JobAdvertisement;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

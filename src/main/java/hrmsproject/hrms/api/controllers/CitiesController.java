@@ -4,7 +4,7 @@ package hrmsproject.hrms.api.controllers;
 import hrmsproject.hrms.business.abstracts.CityService;
 import hrmsproject.hrms.core.utilities.results.DataResult;
 import hrmsproject.hrms.core.utilities.results.Result;
-import hrmsproject.hrms.entities.City;
+import hrmsproject.hrms.entities.concretes.City;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

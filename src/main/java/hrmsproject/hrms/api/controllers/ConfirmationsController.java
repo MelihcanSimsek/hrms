@@ -3,7 +3,7 @@ package hrmsproject.hrms.api.controllers;
 
 import hrmsproject.hrms.business.abstracts.ConfirmationService;
 import hrmsproject.hrms.core.utilities.results.Result;
-import hrmsproject.hrms.entities.Confirmation;
+import hrmsproject.hrms.entities.concretes.Confirmation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -3,7 +3,7 @@ package hrmsproject.hrms.business.concretes;
 import hrmsproject.hrms.business.abstracts.ConfirmationService;
 import hrmsproject.hrms.core.utilities.results.Result;
 import hrmsproject.hrms.core.utilities.results.SuccessResult;
-import hrmsproject.hrms.entities.Confirmation;
+import hrmsproject.hrms.entities.concretes.Confirmation;
 import hrmsproject.hrms.repositories.ConfirmationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

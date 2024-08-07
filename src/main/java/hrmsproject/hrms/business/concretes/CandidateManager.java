@@ -5,9 +5,9 @@ import hrmsproject.hrms.business.abstracts.VerificationService;
 import hrmsproject.hrms.core.adapters.mail.MailService;
 import hrmsproject.hrms.core.adapters.MernisVerification;
 import hrmsproject.hrms.core.utilities.results.*;
-import hrmsproject.hrms.entities.Candidate;
-import hrmsproject.hrms.entities.User;
-import hrmsproject.hrms.entities.Verification;
+import hrmsproject.hrms.entities.concretes.Candidate;
+import hrmsproject.hrms.entities.concretes.User;
+import hrmsproject.hrms.entities.concretes.Verification;
 import hrmsproject.hrms.repositories.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,7 +34,7 @@ public class CandidateManager implements CandidateService {
         if(this.repository.getByEmail(candidate.getEmail()) != null) return new ErrorResult("User email already exists");
         this.repository.save(candidate);
         Candidate savedCandidate = this.repository.getByEmail(candidate.getEmail());
-        String code = this.verificationService.add(new Verification(0,"",false,null,new User(savedCandidate.getId(), savedCandidate.getEmail(), savedCandidate.getPassword()))).getData();
+        String code = this.verificationService.add(new Verification(0,"",false,null,new User(savedCandidate.getId(), savedCandidate.getEmail(), savedCandidate.getPassword(),savedCandidate.getCreatedAt(),savedCandidate.getUpdatedAt()))).getData();
         this.mailService.sendVerifyMail(candidate.getEmail(),"Lorem ipsum dolor sit amet",code);
         return  new SuccessResult("Candidate added");
     }

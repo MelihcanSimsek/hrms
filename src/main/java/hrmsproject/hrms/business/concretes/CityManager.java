@@ -2,7 +2,7 @@ package hrmsproject.hrms.business.concretes;
 
 import hrmsproject.hrms.business.abstracts.CityService;
 import hrmsproject.hrms.core.utilities.results.*;
-import hrmsproject.hrms.entities.City;
+import hrmsproject.hrms.entities.concretes.City;
 import hrmsproject.hrms.repositories.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

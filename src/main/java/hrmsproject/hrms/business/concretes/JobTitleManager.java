@@ -2,13 +2,12 @@ package hrmsproject.hrms.business.concretes;
 
 import hrmsproject.hrms.business.abstracts.JobTitleService;
 import hrmsproject.hrms.core.utilities.results.*;
-import hrmsproject.hrms.entities.JobTitle;
+import hrmsproject.hrms.entities.concretes.JobTitle;
 import hrmsproject.hrms.repositories.JobTitleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class JobTitleManager implements JobTitleService {

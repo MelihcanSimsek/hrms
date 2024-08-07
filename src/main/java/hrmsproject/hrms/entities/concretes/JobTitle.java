@@ -1,4 +1,4 @@
-package hrmsproject.hrms.entities;
+package hrmsproject.hrms.entities.concretes;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

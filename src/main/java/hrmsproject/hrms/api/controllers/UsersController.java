@@ -2,8 +2,7 @@ package hrmsproject.hrms.api.controllers;
 
 import hrmsproject.hrms.business.abstracts.UserService;
 import hrmsproject.hrms.core.utilities.results.ErrorDataResult;
-import hrmsproject.hrms.core.utilities.results.Result;
-import hrmsproject.hrms.entities.User;
+import hrmsproject.hrms.entities.concretes.User;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

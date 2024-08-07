@@ -3,7 +3,7 @@ package hrmsproject.hrms.api.controllers;
 import hrmsproject.hrms.business.abstracts.JobAdvertisementService;
 import hrmsproject.hrms.core.utilities.results.DataResult;
 import hrmsproject.hrms.core.utilities.results.Result;
-import hrmsproject.hrms.entities.JobAdvertisement;
+import hrmsproject.hrms.entities.concretes.JobAdvertisement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

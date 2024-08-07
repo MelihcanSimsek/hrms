@@ -1,10 +1,7 @@
-package hrmsproject.hrms.entities;
+package hrmsproject.hrms.entities.concretes;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,6 +31,6 @@ public class Employer extends User {
     @NotBlank(message = "Phone number can not be empty")
     private String phoneNumber;
 
-    @OneToMany(mappedBy = "employer")
+    @OneToMany(mappedBy = "employer",fetch = FetchType.LAZY)
     private List<JobAdvertisement> jobAdvertisements;
 }

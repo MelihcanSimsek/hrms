@@ -2,7 +2,7 @@ package hrmsproject.hrms.business.concretes;
 
 import hrmsproject.hrms.business.abstracts.JobAdvertisementService;
 import hrmsproject.hrms.core.utilities.results.*;
-import hrmsproject.hrms.entities.JobAdvertisement;
+import hrmsproject.hrms.entities.concretes.JobAdvertisement;
 import hrmsproject.hrms.repositories.JobAdvertisementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

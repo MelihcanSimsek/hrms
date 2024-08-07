@@ -2,7 +2,7 @@ package hrmsproject.hrms.business.concretes;
 
 import hrmsproject.hrms.business.abstracts.VerificationService;
 import hrmsproject.hrms.core.utilities.results.*;
-import hrmsproject.hrms.entities.Verification;
+import hrmsproject.hrms.entities.concretes.Verification;
 import hrmsproject.hrms.repositories.VerificationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

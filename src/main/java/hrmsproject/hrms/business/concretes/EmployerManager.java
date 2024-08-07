@@ -4,9 +4,9 @@ import hrmsproject.hrms.business.abstracts.EmployerService;
 import hrmsproject.hrms.business.abstracts.VerificationService;
 import hrmsproject.hrms.core.adapters.mail.MailService;
 import hrmsproject.hrms.core.utilities.results.*;
-import hrmsproject.hrms.entities.Employer;
-import hrmsproject.hrms.entities.User;
-import hrmsproject.hrms.entities.Verification;
+import hrmsproject.hrms.entities.concretes.Employer;
+import hrmsproject.hrms.entities.concretes.User;
+import hrmsproject.hrms.entities.concretes.Verification;
 import hrmsproject.hrms.repositories.EmployerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +31,7 @@ public class EmployerManager implements EmployerService {
         if(this.checkEmployerExists(employer.getEmail())) return new ErrorResult("Employer already exists");
         this.repository.save(employer);
         Employer savedEmployer = this.repository.getByEmail(employer.getEmail());
-        String code = this.verificationService.add(new Verification(0,"",false,null,new User(savedEmployer.getId(), savedEmployer.getEmail(), savedEmployer.getPassword()))).getData();
+        String code = this.verificationService.add(new Verification(0,"",false,null,new User(savedEmployer.getId(), savedEmployer.getEmail(), savedEmployer.getPassword(),savedEmployer.getCreatedAt(),savedEmployer.getUpdatedAt()))).getData();
         this.mailService.sendVerifyMail(employer.getEmail(),"Lorem ipsum dolor sit amet",code);
         return new SuccessResult("Employer added");
     }
